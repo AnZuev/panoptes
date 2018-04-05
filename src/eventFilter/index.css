@@ -1,0 +1,36 @@
+#eventFilter{
+  background: white;
+  padding: 10px;
+}
+
+.eventFilter__item{
+  padding-left: 10px;
+  margin-top: 5px;
+  min-width: 148px;
+  cursor: pointer;
+}
+
+.eventFilter__item:hover p.eventFilter__checkbox{
+  background: rgba(21, 57, 129, 0.1);
+}
+.eventFilter__item__checked p.eventFilter__checkbox{
+  background: rgba(21, 57, 129, 0.31);
+}
+.eventFilter__item__checked:hover p.eventFilter__checkbox{
+  background: rgba(21, 57, 129, 0.31) !important;
+}
+.eventFilter__checkbox{
+  min-height: 10px;
+  min-width: 10px;
+  display: inline-block;
+  border-radius: 1px;
+  cursor: pointer;
+  border: solid 1px  rgba(21, 57, 129, 0.35);
+  transition: background  0.1s ease;
+  margin-top: 1px;
+}
+
+.eventFilter__wrapper{
+  display: inline-block;
+  float: right;
+}

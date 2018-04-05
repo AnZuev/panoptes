@@ -1,0 +1,44 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: HelveticaNeue;
+  background: #EAEAEA;
+  font-size: 13px;
+  letter-spacing: 0.3px
+}
+
+.grayText{
+  color: #4A4A4A
+}
+
+.darkBlueText{
+  color: #153981
+}
+
+.lightBlueBackgroud{
+  color: rgba(21, 57, 129, 0.35);
+}
+
+p{
+  padding: 0;
+  margin: 0;
+}
+
+.textAlignRight{
+  text-align: right;
+}
+
+.blockTenPXHeight{
+  min-height: 10px;
+}
+
+.blockTenPXWidth{
+  min-width: 10px;
+  display: inline-block;
+}
+input:focus {
+  outline:none;
+}
+::placeholder{
+  color: rgba(0, 0, 0, 0.33);
+}

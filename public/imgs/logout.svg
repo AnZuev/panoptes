@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="45px" height="13px" viewBox="0 0 45 13" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.2 (51160) - http://www.bohemiancoding.com/sketch -->
+    <title>Logout</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-3" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" font-family="HelveticaNeue, Helvetica Neue" font-size="14" font-weight="normal" letter-spacing="0.35">
+        <g id="Desktop-HD-Copy" transform="translate(-1379.000000, -15.000000)" fill="#FFFFFF">
+            <g id="Header">
+                <text id="Logout">
+                    <tspan x="1378" y="25">Logout</tspan>
+                </text>
+            </g>
+        </g>
+    </g>
+</svg>
