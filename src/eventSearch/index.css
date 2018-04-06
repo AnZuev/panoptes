@@ -29,7 +29,7 @@
     box-sizing: border-box;
     cursor: pointer;
     box-shadow: 0 0 4px 0 rgba(21, 57, 129, 0.35);
-    transition: box-shadow 0.2s ease;
+    transition: box-shadow 0.3s ease, margin-left 0.3s ease;
     margin-top: 10px;
 }
 .eventSearch__resultItem:hover{
@@ -55,7 +55,7 @@
     margin-top: -27px;
     margin-left: 318px;
     opacity: 0;
-    transition: opacity 0.1s ease;
+    transition: opacity 1s ease;
 }
 .eventSearch__resultItem__title{
     font-family: HelveticaNeue-Bold;
