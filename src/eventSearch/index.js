@@ -13,6 +13,8 @@ class EventSearch extends Component {
         window.eventSearch = this;
         this.data = {};
 
+        this.filter();
+
     }
     setActive(searchResultItem){
         if(this.data.active ){
@@ -21,7 +23,23 @@ class EventSearch extends Component {
         this.data.active = searchResultItem;
     }
 
+    filter(){
+        this.state.filteredEvents = this.state.events.filter((event) => {
+
+            let filters = window.ActiveFilters.map((filter) => {
+                console.log(filter);
+                return event.type === filter;
+            });
+
+            console.log(filters);
+            return filters.some((filter) => filter)
+        });
+
+        this.forceUpdate();
+    }
+
     render() {
+
         let blocks = [];
         this.state.filteredEvents.forEach((item) => {
             blocks.push(<SearchResultItem
