@@ -1,0 +1,61 @@
+#eventDetailedDescription{
+    margin-left: 20px;
+}
+.eventDetailedDescription__header{
+    margin-top: 3px;
+    font-family: HelveticaNeue-Medium;
+    font-size: 18px;
+    letter-spacing: 0.3px;
+}
+
+.eventDetailedDescription__left{
+    background: white;
+    padding:15px;
+    margin-top:15px;
+    min-width: 294px;
+}
+
+.eventDetailedDescription__searchBlock{
+    background: #F9F9F9;
+    padding-left: 10px;
+    border-radius: 2px;
+    min-width: 252px;
+    max-width: 252px;
+    box-sizing: border-box;
+    display: inline-block;
+    margin-left: 15px;
+}
+.eventDetailedDescription__filterIcon{
+    cursor: pointer;
+    transition: box-shadow 0.1s ease;
+}
+.eventDetailedDescription__filterIcon:hover{
+    box-shadow: 0 0 4px 0 rgba(21, 57, 129, 0.35);
+}
+
+.eventDetailedDescription__search{
+    max-width: 252px;
+    display: flex;
+    align-items: flex-start;
+}
+.eventDetailedDescription__searchBlock input{
+    background: none;
+    line-height: 25px;
+    border: none;
+    font-size: 13px;
+}
+
+.eventDetailedDescription__timeBlock{
+    margin-top:20px;
+}
+.eventDetailedDescription__timeBlockHeader{
+    font-family: HelveticaNeue-Medium;
+    font-size: 15px;
+    letter-spacing: 0.3px;
+}
+.eventDetailedDescription__timeBlockFlights{
+    padding-left: 15px;
+}
+.eventDetailedDescription__timeBlockFlights tr{
+    margin-top: 10px;
+}

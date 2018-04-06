@@ -19,7 +19,6 @@ class SearchBlock extends Component {
             <p id="eventSearch__searchBlock">
                 <img src="/imgs/searchIcon.svg"/>
                 <div className="blockTenPXWidth"></div>
-                <div className="blockTenPXWidth"></div>
                 <input placeholder="Search"></input>
             </p>
         );

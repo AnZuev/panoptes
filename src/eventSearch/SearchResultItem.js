@@ -15,10 +15,18 @@ class SearchResultItem extends Component {
 
 
     choose() {
-        this.setState({
-            chosen: true
-        });
-        window.eventSearch.setActive(this);
+        if(this.state.chosen){
+            window.eventSearch.setActive(null);
+            this.setState({
+                chosen: false
+            });
+        }else{
+            window.eventSearch.setActive(this);
+            this.setState({
+                chosen: true
+            });
+        }
+
     }
 
     unchoose(){
@@ -47,7 +55,7 @@ class SearchResultItem extends Component {
                     <span className="eventSearch__resultItem__numberOfFlights">{this.props.numberOfFlights} flights</span>
                     <span className="eventSearch__resultItem__date">{date}</span>
                 </p>
-                {img}
+
             </div>
         );
     }
