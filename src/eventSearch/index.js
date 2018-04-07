@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import './index.css';
 import SearchBlock from "./SearchBlock.js"
 import SearchResultItem from "./SearchResultItem.js"
+import DetailedDescription from "../eventDetailedDescription/index.js"
+
 
 class EventSearch extends Component {
     constructor(props){
@@ -17,8 +19,10 @@ class EventSearch extends Component {
     setActive(searchResultItem){
         if(this.data.active ){
             this.data.active.unchoose();
+            window.eventDetails.changeChosenState();
         }
         this.data.active = searchResultItem;
+        window.eventDetails.changeChosenState();
     }
 
     render() {

@@ -55,7 +55,6 @@ class SearchResultItem extends Component {
                     <span className="eventSearch__resultItem__numberOfFlights">{this.props.numberOfFlights} flights</span>
                     <span className="eventSearch__resultItem__date">{date}</span>
                 </p>
-
             </div>
         );
     }
