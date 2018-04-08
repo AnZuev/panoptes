@@ -1,6 +1,30 @@
-#eventDetailedDescription{
+.eventDetailedDescription {
     margin-left: 20px;
+    transition: opacity 0.2s ease;
 }
+
+.eventDetailedDescription-appear {
+    opacity: 1;
+    /*-webkit-animation: fadein 0.5s;
+    animation: fadein 0.5s;*/
+}
+
+.eventDetailedDescription-disappear {
+    opacity: 0;
+}
+
+@keyframes fadein {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@-webkit-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+
+
 .eventDetailedDescription__header{
     margin-top: 3px;
     font-family: HelveticaNeue-Medium;

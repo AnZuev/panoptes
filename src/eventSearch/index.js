@@ -19,10 +19,8 @@ class EventSearch extends Component {
     setActive(searchResultItem){
         if(this.data.active ){
             this.data.active.unchoose();
-            window.eventDetails.changeChosenState();
         }
         this.data.active = searchResultItem;
-        window.eventDetails.changeChosenState();
     }
 
     render() {

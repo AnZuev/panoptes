@@ -7,56 +7,61 @@ class EventDetailedDescription extends Component {
         this.state = {
             chosen: false
         };
-        this.changeChosenState = this.changeChosenState.bind(this);
+        this.choose = this.choose.bind(this);
+        this.unchoose = this.unchoose.bind(this);
         window.eventDetails = this;
     }
 
-    changeChosenState() {
+    choose() {
         this.setState({
-            chosen: !this.state.chosen
+            chosen: true
+        });
+    }
+
+    unchoose() {
+        this.setState({
+            chosen: false
         });
     }
 
 
     render() {
-        if (this.state.chosen) {
-            return (
-                <div id="eventDetailedDescription">
-                    <p className="eventDetailedDescription__header">
-                        <span className="darkBlueText">{this.props.itemId}</span> {this.props.title}
-                    </p>
-                    <div className="eventDetailedDescription__left">
-                        <div className="eventDetailedDescription__search">
-                            <img src="/imgs/eventDetailsFilter.svg" alt="" className="eventDetailedDescription__filterIcon"/>
-                            <p className="eventDetailedDescription__searchBlock">
-                                <img src="/imgs/searchIcon.svg"/>
-                                <div className="blockTenPXWidth"></div>
-                                <input placeholder="Search"></input>
-                            </p>
-                        </div>
-                        <div className="eventDetailedDescription__timeBlock">
-                            <p className="eventDetailedDescription__timeBlockHeader">14-16</p>
-                            <table className="eventDetailedDescription__timeBlockFlights">
-                                <tbody>
-                                <tr></tr>
-                                <tr>
-                                    <td>{this.props.flights[0].id}</td>
-                                    <td>{this.props.flights[0].from} -> {this.props.flights[0].to}</td>
-                                    <td>{this.props.flights[0].time.getHours()}:{this.props.flights[0].time.getMinutes()}</td>
-                                    <td>Delayed</td>
-                                </tr>
-                                </tbody>
-                            </table>
-                        </div>
+        let isChosen = "eventDetailedDescription-appear";
+        if (!this.state.chosen) {
+            isChosen = "eventDetailedDescription-disappear";
+        }
+        return (
+            <div class={`eventDetailedDescription ${isChosen}`}>
+                <p className="eventDetailedDescription__header">
+                    <span className="darkBlueText">{this.props.itemId}</span> {this.props.title}
+                </p>
+                <div className="eventDetailedDescription__left">
+                    <div className="eventDetailedDescription__search">
+                        <img src="/imgs/eventDetailsFilter.svg" alt="" className="eventDetailedDescription__filterIcon"/>
+                        <p className="eventDetailedDescription__searchBlock">
+                            <img src="/imgs/searchIcon.svg"/>
+                            <div className="blockTenPXWidth"></div>
+                            <input placeholder="Search"></input>
+                        </p>
+                    </div>
+                    <div className="eventDetailedDescription__timeBlock">
+                        <p className="eventDetailedDescription__timeBlockHeader">14-16</p>
+                        <table className="eventDetailedDescription__timeBlockFlights">
+                            <tbody>
+                            <tr></tr>
+                            <tr>
+                                <td>{this.props.flights[0].id}</td>
+                                <td>{this.props.flights[0].from} -> {this.props.flights[0].to}</td>
+                                <td>{this.props.flights[0].time.getHours()}:{this.props.flights[0].time.getMinutes()}</td>
+                                <td>Delayed</td>
+                            </tr>
+                            </tbody>
+                        </table>
                     </div>
                 </div>
-            );
-        }
-        else {
-            return null;
-        }
-
-        }
+            </div>
+        );
+    }
 }
 
 export default EventDetailedDescription;
