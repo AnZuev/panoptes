@@ -7,6 +7,7 @@ class EventFilter extends Component {
       super(props);
       // props.blocks has to store: [{title: "title", items:["item1", "item2"...]}]
       // see window.eventFilterBlocks for details
+      window.eventFilter = this;
 
   }
   render() {
@@ -14,9 +15,8 @@ class EventFilter extends Component {
     this.props.blocks.forEach((block) => {
         blocks.push(<span className="grayText">{block.title}</span>);
         block.items.forEach((item) => {
-          blocks.push(<EventFilterItem
-              title={item}
-              />);
+            let filter = <EventFilterItem title={item}/>;
+            blocks.push(filter);
         });
         if(this.props.blocks.indexOf(block) !== this.props.blocks.length - 1){
             blocks.push(<div className="blockTenPXHeight"></div>);
