@@ -24,6 +24,7 @@ class Content extends Component {
                     itemId={`${this.state.event.type}-${this.state.event.id}`}
                     flights={this.state.event.flights}
                     logs={this.state.event.logs}
+                    details={this.state.event.details}
                 />
             </div>
         );

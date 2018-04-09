@@ -33,20 +33,21 @@ class EventDetailedDescription extends Component {
 
         let flights_statuses = [];
         this.props.flights.forEach((flight) => {
-            let status_class = "";
+            let status_class = [];
             if (flight.status === "Delayed") {
-                status_class = "delayed_text_flight";
+                status_class.push(<span className="delayed_text_flight">{flight.status}</span>);
             }
             else if (flight.status === "Cancelled") {
-                status_class = "cancelled_text_flight";
+                status_class.push(<span className="cancelled_text_flight">{flight.status}</span>);
             }
             else if (flight.status === "On time") {
-                status_class = "on_time_text_flight";
+                status_class.push(<span className="on_time_text_flight">{flight.status}</span>);
             }
             else if (flight.status === "Solve") {
-                status_class = "solve_text_flight";
+                status_class.push(<img id="solvePic" src="http://www.iconsplace.com/download/salmon-error-512.gif"/>);
+                status_class.push(<span className="solve_text_flight"> {flight.status}</span>);
             }
-            flights_statuses.push(<p className="eventDetailedDescription__timeBlockFlights"><span className="flight_code_text">{flight.id}</span> <span className="active_text_flight">{flight.from} <img id="flightArrow" src="https://cdn.shopify.com/s/files/1/1759/4609/t/15/assets/index.hero-link-arrow-black.png?14111992258315821421"/> {flight.to}</span> <span className="active_text_flight">{flight.time.getHours()}:{flight.time.getMinutes()}</span> <span className={status_class}> {flight.status}</span></p>);
+            flights_statuses.push(<p className="eventDetailedDescription__timeBlockFlights"><span className="flight_code_text">{flight.id}</span> <span className="active_text_flight">{flight.from} <img id="flightArrow" src="https://cdn.shopify.com/s/files/1/1759/4609/t/15/assets/index.hero-link-arrow-black.png?14111992258315821421"/> {flight.to}</span> <span className="active_text_flight">{flight.time.getHours()}:{flight.time.getMinutes()}</span> {status_class}</p>);
         });
 
         let eventLogs = [];
@@ -90,6 +91,21 @@ class EventDetailedDescription extends Component {
                     </div>
                     <div className="eventDetailedDescription__right">
                         <p className="eventDetailedDescription__sectionHeader">Details</p>
+                        <div className="eventDetailedDescription__detailsBlock">
+                            <p><span className="eventDetailedDescription__detailsText">Assignee: </span><span className="eventDetailedDescription__detailsImportantInfo">{this.props.details.assignee}</span></p>
+                            <p><span className="eventDetailedDescription__detailsText">Status: </span><span className="eventDetailedDescription__detailsImportantInfo">{this.props.details.status}</span></p>
+                        </div>
+                        <div className="eventDetailedDescription__detailsBlock">
+                            <p><span className="eventDetailedDescription__detailsNumbers">{this.props.flights.length} </span><span className="eventDetailedDescription__detailsText">flights:</span></p>
+                            <p className="eventDetailedDescription__detailsSubBlock"><span className="eventDetailedDescription__detailsImportantInfo">{this.props.details.unmanaged_flights} flights unmanaged</span></p>
+                            <p className="eventDetailedDescription__detailsSubBlock"><span className="eventDetailedDescription__detailsImportantInfo">{this.props.details.cancelled_flights} flights cancelled</span></p>
+                        </div>
+                        <div className="eventDetailedDescription__detailsBlock">
+                            <p><span className="eventDetailedDescription__detailsNumbers">{this.props.details.passengers_affected} </span><span className="eventDetailedDescription__detailsText">passengers:</span></p>
+                            <p className="eventDetailedDescription__detailsSubBlock">{this.props.details["9hr_waits"]} <span className="eventDetailedDescription__detailsText">waits for</span> 9 <span className="eventDetailedDescription__detailsText">hours</span></p>
+                            <p className="eventDetailedDescription__detailsSubBlock">{this.props.details["5hr_waits"]} <span className="eventDetailedDescription__detailsText">waits for</span> 5 <span className="eventDetailedDescription__detailsText">hours</span></p>
+                            <p className="eventDetailedDescription__detailsSubBlock">{this.props.details["1hr_waits"]} <span className="eventDetailedDescription__detailsText">waits for</span> 1 <span className="eventDetailedDescription__detailsText">hour</span></p>
+                        </div>
                     </div>
                 </div>
             </div>

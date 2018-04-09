@@ -20,7 +20,7 @@
 .flight_code_text {
     font-family: HelveticaNeue;
     font-size: 13px;
-    color: #153981;
+    color: #184092;
     letter-spacing: 0.3px;
     padding-right: 10px;
 }
@@ -68,6 +68,11 @@
     color: #878787;
     letter-spacing: 0.3px;
     padding-right: 10px;
+}
+
+#solvePic{
+    max-height: 12px;
+    max-width: 12px;
 }
 
 .eventDetailedDescription__detailed_info {
@@ -156,8 +161,8 @@
 
 .eventDetailedDescription__logName {
     font-family: HelveticaNeue;
-    font-size: 14px;
-    color: #153981;
+    font-size: 13px;
+    color: #184092;
     letter-spacing: 0.32px;
     font-weight: 500;
 }
@@ -173,11 +178,11 @@
 
 .eventDetailedDescription__logText {
     font-family: HelveticaNeue;
-    font-size: 14px;
+    font-size: 13px;
     color: #000000;
-    letter-spacing: 0.2px;
+    letter-spacing: 0.32px;
     padding-top: 9px;
-    padding-left: 10px;
+    padding-left: 20px;
 }
 
 .eventDetailedDescription__right {
@@ -185,4 +190,43 @@
     padding: 15px;
     margin-top: 15px;
     min-width: 185px;
+    min-height: 600px;
+}
+
+.eventDetailedDescription__detailsBlock {
+    padding-top: 10px;
+}
+
+.eventDetailedDescription__detailsSubBlock {
+    padding-left: 20px;
+    padding-top:2px;
+}
+
+.eventDetailedDescription__detailsText {
+    font-family: HelveticaNeue;
+    font-size: 13px;
+    color: #5C5C5C;
+    letter-spacing: 0.38px;
+}
+
+.eventDetailedDescription__detailsImportantInfo {
+    font-family: HelveticaNeue;
+    font-size: 13px;
+    color: #184092;
+    letter-spacing: 0.38px;
+
+}
+
+.eventDetailedDescription__detailsNumbers {
+    font-family: HelveticaNeue-Bold;
+    font-size: 13px;
+    color: #000000;
+    letter-spacing: 0.38px;
+}
+
+.eventDetailedDescription_detailesLessImportantNums {
+    font-family: HelveticaNeue;
+    font-size: 13px;
+    color: #000000;
+    letter-spacing: 0.38px;
 }
