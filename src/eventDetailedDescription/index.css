@@ -5,25 +5,75 @@
 
 .eventDetailedDescription-appear {
     opacity: 1;
-    /*-webkit-animation: fadein 0.5s;
-    animation: fadein 0.5s;*/
 }
 
 .eventDetailedDescription-disappear {
     opacity: 0;
 }
 
-@keyframes fadein {
-    from {opacity: 0;}
-    to {opacity: 1;}
+#flightArrow {
+    max-height: 12px;
+    max-width: 15px;
 }
 
-@-webkit-keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 1; }
+/* Text classes for Flights*/
+.flight_code_text {
+    font-family: HelveticaNeue;
+    font-size: 13px;
+    color: #153981;
+    letter-spacing: 0.3px;
+    padding-right: 10px;
 }
 
+.cancelled_text_flight {
+    font-family: HelveticaNeue;
+    font-size: 13px;
+    color: #F5A623;
+    letter-spacing: 0.3px;
+}
 
+.delayed_text_flight {
+    font-family: HelveticaNeue;
+    font-size: 13px;
+    color: #878787;
+    letter-spacing: 0.3px;
+}
+
+.on_time_text_flight {
+    font-family: HelveticaNeue;
+    font-size: 13px;
+    color: #208118;
+    letter-spacing: 0.3px;
+}
+
+.solve_text_flight {
+    font-family: HelveticaNeue;
+    font-size: 13px;
+    color: #D0021B;
+    letter-spacing: 0.3px;
+}
+
+.active_text_flight {
+    font-family: HelveticaNeue;
+    font-size: 13px;
+    color: #000000;
+    letter-spacing: 0.3px;
+    padding-right: 10px;
+
+}
+
+.non-active_text_flight {
+    font-family: HelveticaNeue;
+    font-size: 13px;
+    color: #878787;
+    letter-spacing: 0.3px;
+    padding-right: 10px;
+}
+
+.eventDetailedDescription__detailed_info {
+    display: flex;
+    align-items: flex-start;
+}
 
 .eventDetailedDescription__header{
     margin-top: 3px;
@@ -37,6 +87,7 @@
     padding:15px;
     margin-top:15px;
     min-width: 294px;
+    min-height: 600px;
 }
 
 .eventDetailedDescription__searchBlock{
@@ -76,10 +127,62 @@
     font-family: HelveticaNeue-Medium;
     font-size: 15px;
     letter-spacing: 0.3px;
+    padding-top:10px;
 }
-.eventDetailedDescription__timeBlockFlights{
-    padding-left: 15px;
+
+.eventDetailedDescription__timeBlockFlights {
+    padding-left: 13px;
+    padding-top: 10px;
 }
-.eventDetailedDescription__timeBlockFlights tr{
-    margin-top: 10px;
+
+.eventDetailedDescription__center{
+    background: white;
+    padding:15px;
+    margin-top:15px;
+    min-width: 290px;
+    min-height: 600px;
+}
+
+.eventDetailedDescription__sectionHeader{
+    font-family: HelveticaNeue-Medium;
+    font-size: 15px;
+    letter-spacing: 0.3px;
+    padding-top: 3px;
+}
+
+.eventDetailedDescription__logBlockHeader {
+    padding-top: 10px;
+}
+
+.eventDetailedDescription__logName {
+    font-family: HelveticaNeue;
+    font-size: 14px;
+    color: #153981;
+    letter-spacing: 0.32px;
+    font-weight: 500;
+}
+
+.eventDetailedDescription__logTime {
+    font-family: HelveticaNeue;
+    font-size: 12px;
+    color: #5C5C5C;
+    letter-spacing: 0.3px;
+    float: right;
+    padding-right: 10px;
+}
+
+.eventDetailedDescription__logText {
+    font-family: HelveticaNeue;
+    font-size: 14px;
+    color: #000000;
+    letter-spacing: 0.2px;
+    padding-top: 9px;
+    padding-left: 10px;
+}
+
+.eventDetailedDescription__right {
+    background: white;
+    padding: 15px;
+    margin-top: 15px;
+    min-width: 185px;
 }
