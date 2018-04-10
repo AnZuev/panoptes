@@ -44,10 +44,10 @@ class EventDetailedDescription extends Component {
                 status_class.push(<span className="on_time_text_flight">{flight.status}</span>);
             }
             else if (flight.status === "Solve") {
-                status_class.push(<img id="solvePic" src="http://www.iconsplace.com/download/salmon-error-512.gif"/>);
+                status_class.push(<img id="solvePic" src="/imgs/danger_icon.gif"/>);
                 status_class.push(<span className="solve_text_flight"> {flight.status}</span>);
             }
-            flights_statuses.push(<p className="eventDetailedDescription__timeBlockFlights"><span className="flight_code_text">{flight.id}</span> <span className="active_text_flight">{flight.from} <img id="flightArrow" src="https://cdn.shopify.com/s/files/1/1759/4609/t/15/assets/index.hero-link-arrow-black.png?14111992258315821421"/> {flight.to}</span> <span className="active_text_flight">{flight.time.getHours()}:{flight.time.getMinutes()}</span> {status_class}</p>);
+            flights_statuses.push(<p className="eventDetailedDescription__timeBlockFlights"><span className="flight_code_text">{flight.id}</span> <span className="active_text_flight">{flight.from} <img id="flightArrow" src="/imgs/arrow_right.png"/> {flight.to}</span> <span className="active_text_flight">{flight.time.getHours()}:{flight.time.getMinutes()}</span> {status_class}</p>);
         });
 
         let eventLogs = [];

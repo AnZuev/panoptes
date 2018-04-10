@@ -37,6 +37,7 @@ class EventSearch extends Component {
 
     render() {
         let blocks = [];
+        blocks.push();
         this.state.filteredEvents.forEach((item) => {
             blocks.push(<SearchResultItem
                 id={item.id}
@@ -46,12 +47,17 @@ class EventSearch extends Component {
                 numberOfFlights={item.flights.length}
             />)
         });
-        return (
-            <div id="eventSearch">
-                <SearchBlock/>
-                {blocks}
-            </div>
-        );
+        if (blocks.length !== 0) {
+            return (
+                <div id="eventSearch">
+                    <SearchBlock/>
+                    {blocks}
+                </div>
+            );
+        }
+        else {
+            return null;
+        }
     }
 }
 
