@@ -5,16 +5,19 @@ class EventDetailedDescription extends Component {
     constructor(props){
         super(props);
         this.state = {
-            chosen: false
+            chosen: false,
+            currentEvent: ""
         };
         this.choose = this.choose.bind(this);
         this.unchoose = this.unchoose.bind(this);
         window.eventDetails = this;
     }
 
-    choose() {
+    choose(itemId) {
+        console.log(itemId);
         this.setState({
-            chosen: true
+            chosen: true,
+            currentEvent: itemId
         });
     }
 
@@ -31,30 +34,41 @@ class EventDetailedDescription extends Component {
             isChosen = "eventDetailedDescription-disappear";
         }
 
-        let flights_statuses = [];
-        this.props.flights.forEach((flight) => {
-            let status_class = [];
-            if (flight.status === "Delayed") {
-                status_class.push(<span className="delayed_text_flight">{flight.status}</span>);
+        let currentEventInfo = {};
+        window.events.forEach((event) => {
+            if (event.short_type + "-" + event.id === this.state.currentEvent) {
+                currentEventInfo = event;
             }
-            else if (flight.status === "Cancelled") {
-                status_class.push(<span className="cancelled_text_flight">{flight.status}</span>);
-            }
-            else if (flight.status === "On time") {
-                status_class.push(<span className="on_time_text_flight">{flight.status}</span>);
-            }
-            else if (flight.status === "Solve") {
-                status_class.push(<img id="solvePic" src="/imgs/danger_icon.gif"/>);
-                status_class.push(<span className="solve_text_flight"> {flight.status}</span>);
-            }
-            flights_statuses.push(<p className="eventDetailedDescription__timeBlockFlights"><span className="flight_code_text">{flight.id}</span> <span className="active_text_flight">{flight.from} <img id="flightArrow" src="/imgs/arrow_right.png"/> {flight.to}</span> <span className="active_text_flight">{flight.time.getHours()}:{flight.time.getMinutes()}</span> {status_class}</p>);
         });
+        console.log(currentEventInfo);
 
+
+        let flights_statuses = [];
         let eventLogs = [];
-        this.props.logs.forEach((log) => {
-            eventLogs.push(<p className="eventDetailedDescription__logBlockHeader"><span className="eventDetailedDescription__logName">{log.from}</span><span className="eventDetailedDescription__logTime">{log.time.getHours()}:{log.time.getMinutes()}</span></p>);
-            eventLogs.push(<p className="eventDetailedDescription__logText">{log.text}</p>)
-        });
+        if (this.state.currentEvent !== "") {
+            currentEventInfo.flights.forEach((flight) => {
+                let status_class = [];
+                if (flight.status === "Delayed") {
+                    status_class.push(<span className="delayed_text_flight">{flight.status}</span>);
+                }
+                else if (flight.status === "Cancelled") {
+                    status_class.push(<span className="cancelled_text_flight">{flight.status}</span>);
+                }
+                else if (flight.status === "On time") {
+                    status_class.push(<span className="on_time_text_flight">{flight.status}</span>);
+                }
+                else if (flight.status === "Solve") {
+                    status_class.push(<img id="solvePic" src="/imgs/danger_icon.gif"/>);
+                    status_class.push(<span className="solve_text_flight"> {flight.status}</span>);
+                }
+                flights_statuses.push(<p className="eventDetailedDescription__timeBlockFlights"><span className="flight_code_text">{flight.id}</span> <span className="active_text_flight">{flight.from} <img id="flightArrow" src="/imgs/arrow_right.png"/> {flight.to}</span> <span className="active_text_flight">{flight.time.getHours()}:{flight.time.getMinutes()}</span> {status_class}</p>);
+            });
+
+            currentEventInfo.logs.forEach((log) => {
+                eventLogs.push(<p className="eventDetailedDescription__logBlockHeader"><span className="eventDetailedDescription__logName">{log.from}</span><span className="eventDetailedDescription__logTime">{log.time.getHours()}:{log.time.getMinutes()}</span></p>);
+                eventLogs.push(<p className="eventDetailedDescription__logText">{log.text}</p>)
+            });
+        }
 
 
 

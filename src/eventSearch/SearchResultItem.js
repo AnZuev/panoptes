@@ -23,8 +23,8 @@ class SearchResultItem extends Component {
             });
         }else{
             window.eventSearch.setActive(this);
-            window.eventDetails.unchoose();
-            window.eventDetails.choose();
+            //window.eventDetails.unchoose();
+            window.eventDetails.choose(this.props.type + "-" + this.props.id);
             this.setState({
                 chosen: true
             });
