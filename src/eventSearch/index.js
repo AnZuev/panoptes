@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import './index.css';
 import SearchBlock from "./SearchBlock.js"
 import SearchResultItem from "./SearchResultItem.js"
+import DetailedDescription from "../eventDetailedDescription/index.js"
+
 
 class EventSearch extends Component {
     constructor(props){
@@ -12,6 +14,7 @@ class EventSearch extends Component {
         };
         window.eventSearch = this;
         this.data = {};
+        this.filter();
 
     }
     setActive(searchResultItem){
@@ -21,12 +24,23 @@ class EventSearch extends Component {
         this.data.active = searchResultItem;
     }
 
+    filter(){
+        this.state.filteredEvents = this.state.events.filter((event) => {
+            let filters = window.ActiveFilters.map((filter) => {
+                console.log(filter);
+                return event.type === filter;
+            });
+            return filters.some((filter) => filter)
+        });
+        this.forceUpdate();
+    }
+
     render() {
         let blocks = [];
         this.state.filteredEvents.forEach((item) => {
             blocks.push(<SearchResultItem
                 id={item.id}
-                type={item.type}
+                type={item.short_type}
                 title={item.title}
                 date={item.date}
                 numberOfFlights={item.flights.length}

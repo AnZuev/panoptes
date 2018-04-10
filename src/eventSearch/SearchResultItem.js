@@ -17,11 +17,14 @@ class SearchResultItem extends Component {
     choose() {
         if(this.state.chosen){
             window.eventSearch.setActive(null);
+            window.eventDetails.unchoose();
             this.setState({
                 chosen: false
             });
         }else{
             window.eventSearch.setActive(this);
+            window.eventDetails.unchoose();
+            window.eventDetails.choose();
             this.setState({
                 chosen: true
             });
@@ -32,7 +35,7 @@ class SearchResultItem extends Component {
     unchoose(){
         this.setState({
             chosen: false
-        })
+        });
     }
     render() {
         let date = `${this.props.date.toLocaleDateString()}`.split("/").join(".");
@@ -55,7 +58,6 @@ class SearchResultItem extends Component {
                     <span className="eventSearch__resultItem__numberOfFlights">{this.props.numberOfFlights} flights</span>
                     <span className="eventSearch__resultItem__date">{date}</span>
                 </p>
-
             </div>
         );
     }
