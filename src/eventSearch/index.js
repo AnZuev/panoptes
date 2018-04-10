@@ -30,7 +30,6 @@ class EventSearch extends Component {
                 console.log(filter);
                 return event.type === filter;
             });
-            console.log(filters);
             return filters.some((filter) => filter)
         });
         this.forceUpdate();
@@ -41,7 +40,7 @@ class EventSearch extends Component {
         this.state.filteredEvents.forEach((item) => {
             blocks.push(<SearchResultItem
                 id={item.id}
-                type={item.type}
+                type={item.short_type}
                 title={item.title}
                 date={item.date}
                 numberOfFlights={item.flights.length}

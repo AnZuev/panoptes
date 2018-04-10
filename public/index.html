@@ -41,7 +41,8 @@
       window.eventFilterBlocks = [
           {
               title: "Filters",
-              items:["ATC", "Weather", "Airport", "Environment", "Strikes"]
+              items:["ATC", "Weather", "Airport", "Environment", "Strikes"],
+              short_items: ["ATC", "WTH", "APT", "ENV", "STR"]
           },
           {
               title: "Sorting",
@@ -55,6 +56,7 @@
           {
               id: 43,
               type: "ATC",
+              short_type: "ATC",
               flights:[
                   {
                       id: 'FA-537',
@@ -187,7 +189,92 @@
           },
           {
               id: 43,
-              type: "ATC",
+              type: "Weather",
+              short_type: "WTH",
+              flights:[
+                  {
+                      id: 'FA-537',
+                      from: "DME",
+                      to: "CDG",
+                      time: new Date('2018-04-10T14:30:00')
+                  },
+                  {
+                      id: 'FA-549',
+                      from: "DME",
+                      to: "CDG",
+                      time: new Date('2018-04-10T15:40:00')
+                  }
+              ],
+              title: "Capacity restriction in Berlin",
+              date: new Date("2018-04-10"),
+              logs: [
+                  {
+                      from: "www.france-goc.fr",
+                      time: new Date('2018-04-10T10:13:00'),
+                      text: "CDG reduced its capacity by 12% due to technical problems. Some flights may be deleayd or canceled."
+                  }
+              ]
+          },
+          {
+              id: 43,
+              type: "Airport",
+              short_type: "APT",
+              flights:[
+                  {
+                      id: 'FA-537',
+                      from: "DME",
+                      to: "CDG",
+                      time: new Date('2018-04-10T14:30:00')
+                  },
+                  {
+                      id: 'FA-549',
+                      from: "DME",
+                      to: "CDG",
+                      time: new Date('2018-04-10T15:40:00')
+                  }
+              ],
+              title: "Capacity restriction in Berlin",
+              date: new Date("2018-04-10"),
+              logs: [
+                  {
+                      from: "www.france-goc.fr",
+                      time: new Date('2018-04-10T10:13:00'),
+                      text: "CDG reduced its capacity by 12% due to technical problems. Some flights may be deleayd or canceled."
+                  }
+              ]
+          },
+          {
+              id: 43,
+              type: "Environment",
+              short_type: "ENV",
+              flights:[
+                  {
+                      id: 'FA-537',
+                      from: "DME",
+                      to: "CDG",
+                      time: new Date('2018-04-10T14:30:00')
+                  },
+                  {
+                      id: 'FA-549',
+                      from: "DME",
+                      to: "CDG",
+                      time: new Date('2018-04-10T15:40:00')
+                  }
+              ],
+              title: "Capacity restriction in Berlin",
+              date: new Date("2018-04-10"),
+              logs: [
+                  {
+                      from: "www.france-goc.fr",
+                      time: new Date('2018-04-10T10:13:00'),
+                      text: "CDG reduced its capacity by 12% due to technical problems. Some flights may be deleayd or canceled."
+                  }
+              ]
+          },
+          {
+              id: 43,
+              type: "Strikes",
+              short_type: "STR",
               flights:[
                   {
                       id: 'FA-537',
@@ -215,87 +302,7 @@
           {
               id: 43,
               type: "ATC",
-              flights:[
-                  {
-                      id: 'FA-537',
-                      from: "DME",
-                      to: "CDG",
-                      time: new Date('2018-04-10T14:30:00')
-                  },
-                  {
-                      id: 'FA-549',
-                      from: "DME",
-                      to: "CDG",
-                      time: new Date('2018-04-10T15:40:00')
-                  }
-              ],
-              title: "Capacity restriction in Berlin",
-              date: new Date("2018-04-10"),
-              logs: [
-                  {
-                      from: "www.france-goc.fr",
-                      time: new Date('2018-04-10T10:13:00'),
-                      text: "CDG reduced its capacity by 12% due to technical problems. Some flights may be deleayd or canceled."
-                  }
-              ]
-          },
-          {
-              id: 43,
-              type: "ATC",
-              flights:[
-                  {
-                      id: 'FA-537',
-                      from: "DME",
-                      to: "CDG",
-                      time: new Date('2018-04-10T14:30:00')
-                  },
-                  {
-                      id: 'FA-549',
-                      from: "DME",
-                      to: "CDG",
-                      time: new Date('2018-04-10T15:40:00')
-                  }
-              ],
-              title: "Capacity restriction in Berlin",
-              date: new Date("2018-04-10"),
-              logs: [
-                  {
-                      from: "www.france-goc.fr",
-                      time: new Date('2018-04-10T10:13:00'),
-                      text: "CDG reduced its capacity by 12% due to technical problems. Some flights may be deleayd or canceled."
-                  }
-              ]
-          },
-          {
-              id: 43,
-              type: "ATC",
-              flights:[
-                  {
-                      id: 'FA-537',
-                      from: "DME",
-                      to: "CDG",
-                      time: new Date('2018-04-10T14:30:00')
-                  },
-                  {
-                      id: 'FA-549',
-                      from: "DME",
-                      to: "CDG",
-                      time: new Date('2018-04-10T15:40:00')
-                  }
-              ],
-              title: "Capacity restriction in Berlin",
-              date: new Date("2018-04-10"),
-              logs: [
-                  {
-                      from: "www.france-goc.fr",
-                      time: new Date('2018-04-10T10:13:00'),
-                      text: "CDG reduced its capacity by 12% due to technical problems. Some flights may be deleayd or canceled."
-                  }
-              ]
-          },
-          {
-              id: 43,
-              type: "ATC",
+              short_type: "ATC",
               flights:[
                   {
                       id: 'FA-537',

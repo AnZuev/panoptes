@@ -21,7 +21,7 @@ class Content extends Component {
                 <EventSearch/>
                 <EventDetailedDescription
                     title={this.state.event.title}
-                    itemId={`${this.state.event.type}-${this.state.event.id}`}
+                    itemId={`${this.state.event.short_type}-${this.state.event.id}`}
                     flights={this.state.event.flights}
                     logs={this.state.event.logs}
                     details={this.state.event.details}
