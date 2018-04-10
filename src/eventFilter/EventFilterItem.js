@@ -22,13 +22,23 @@ class EventFilterItem extends Component {
     onCLick() {
         this.changeCheckedState();
             if (!this.state.checked){
-                window.ActiveFilters.push(this.state.title)
+                if (this.state.title === 'By time' || this.state.title === 'By importance')
+                {
+                    window.ActiveSort.push(this.state.title)
+                }else{
+                    window.ActiveFilters.push(this.state.title)
+                }
+
             }
             else {
-                window.ActiveFilters = window.ActiveFilters.filter(item => item !== this.state.title)
+                if (this.state.title === 'By time' || this.state.title === 'By importance')
+                {
+                    window.ActiveSort = window.ActiveSort.filter(item => item !== this.state.title)
+                }else {
+                    window.ActiveFilters = window.ActiveFilters.filter(item => item !== this.state.title)
+                }
             }
-            console.log(window.ActiveFilters);
-            window.eventSearch.filter();
+            window.eventSearch.updateEvents();
         }
 
     render() {

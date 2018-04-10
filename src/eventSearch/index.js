@@ -27,12 +27,58 @@ class EventSearch extends Component {
     filter(){
         this.state.filteredEvents = this.state.events.filter((event) => {
             let filters = window.ActiveFilters.map((filter) => {
-                console.log(filter);
                 return event.type === filter;
             });
             return filters.some((filter) => filter)
         });
+    }
+
+    updateEvents(){
+        this.filter();
+        this.sort();
         this.forceUpdate();
+    }
+
+    sort(){
+        let time_cmp = (a, b) => {
+            if (a.date > b.date ) {
+                return -1;
+            }
+            if (a.date < b.date) {
+                return 1;
+            }
+            return 0;
+        };
+
+        let importance_cmp = (a, b) => {
+            if (a.flights.length > b.flights.length ) {
+                return -1;
+            }
+            if (a.flights.length < b.flights.length) {
+                return 1;
+            }
+            return 0;
+        };
+
+        let double_cmp = (a, b) => {
+            let imp = importance_cmp(a, b);
+            if (imp === 0){
+                return time_cmp(a, b)
+            }else {
+                return imp
+            }
+        };
+
+        let by_time = window.ActiveSort.includes('By time');
+        let by_importance = window.ActiveSort.includes('By importance');
+
+        if (by_time && by_importance){
+            this.state.filteredEvents.sort(double_cmp)
+        }else if(by_time) {
+            this.state.filteredEvents.sort(time_cmp);
+        }else if(by_importance) {
+            this.state.filteredEvents.sort(importance_cmp);
+        }
     }
 
     render() {
