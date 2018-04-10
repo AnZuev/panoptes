@@ -60,84 +60,84 @@
               flights:[
                   {
                       id: 'FA-537',
-                      from: "DME",
+                      from: "TXL",
                       to: "CDG",
                       time: new Date('2018-04-10T14:30:00'),
                       status: "Delayed"
                   },
                   {
                       id: 'FA-549',
-                      from: "DME",
+                      from: "TXL",
                       to: "CDG",
                       time: new Date('2018-04-10T15:40:00'),
                       status: "Delayed"
                   },
                   {
                       id: 'FA-549',
-                      from: "DME",
+                      from: "TXL",
                       to: "CDG",
                       time: new Date('2018-04-10T15:50:00'),
                       status: "Cancelled"
                   },
                   {
                       id: 'FA-549',
-                      from: "DME",
+                      from: "TXL",
                       to: "CDG",
                       time: new Date('2018-04-10T15:55:00'),
                       status: "Solve"
                   },
                   {
                       id: 'FA-549',
-                      from: "DME",
+                      from: "TXL",
                       to: "CDG",
                       time: new Date('2018-04-10T16:10:00'),
                       status: "On time"
                   },
                   {
                       id: 'FA-549',
-                      from: "DME",
+                      from: "TXL",
                       to: "CDG",
                       time: new Date('2018-04-10T16:30:00'),
                       status: "Cancelled"
                   },
                   {
                       id: 'FA-549',
-                      from: "DME",
+                      from: "TXL",
                       to: "CDG",
                       time: new Date('2018-04-10T17:40:00'),
                       status: "Solve"
                   },
                   {
                       id: 'FA-598',
-                      from: "DME",
+                      from: "TXL",
                       to: "ZHR",
                       time: new Date('2018-04-10T17:50:00'),
                       status: "On time"
                   },
                   {
                       id: 'FA-549',
-                      from: "DME",
+                      from: "TXL",
                       to: "CDG",
                       time: new Date('2018-04-10T18:10:00'),
                       status: "Delayed"
                   },
                   {
                       id: 'FA-580',
-                      from: "DME",
+                      from: "TXL",
                       to: "CDG",
                       time: new Date('2018-04-10T18:15:00'),
                       status: "On time"
                   },
                   {
                       id: 'FA-549',
-                      from: "DME",
+                      from: "TXL",
                       to: "GNV",
                       time: new Date('2018-04-10T18:35:00'),
                       status: "On time"
                   },
                   {
                       id: 'FA-549',
-                      from: "DME",
+                      from: "TXL",
                       to: "CDG",
                       time: new Date('2018-04-10T19:20:00'),
                       status: "Solve"
@@ -149,7 +149,7 @@
                   {
                       from: "www.france-goc.fr",
                       time: new Date('2018-04-10T10:13:00'),
-                      text: "CDG reduced its capacity by 12% due to technical problems. Some flights may be deleayd or canceled."
+                      text: "TXL reduced its capacity by 12% due to technical problems. Some flights may be deleayd or canceled."
                   },
                   {
                       from: "Airport staff (e-mail):",
@@ -191,29 +191,135 @@
               id: 43,
               type: "Weather",
               short_type: "WTH",
-              flights:[
-                  {
-                      id: 'FA-537',
-                      from: "DME",
-                      to: "CDG",
-                      time: new Date('2018-04-10T14:30:00')
-                  },
-                  {
-                      id: 'FA-549',
-                      from: "DME",
-                      to: "CDG",
-                      time: new Date('2018-04-10T15:40:00')
-                  }
-              ],
-              title: "Capacity restriction in Berlin",
+              flights: [
+          {
+              id: 'FA-537',
+              from: "TXL",
+              to: "CDG",
+              time: new Date('2018-04-10T14:30:00'),
+              status: "Delayed"
+          },
+          {
+              id: 'FA-549',
+              from: "TXL",
+              to: "CDG",
+              time: new Date('2018-04-10T15:40:00'),
+              status: "Delayed"
+          },
+          {
+              id: 'FA-549',
+              from: "DME",
+              to: "TXL",
+              time: new Date('2018-04-10T15:50:00'),
+              status: "Cancelled"
+          },
+          {
+              id: 'FA-549',
+              from: "DME",
+              to: "TXL",
+              time: new Date('2018-04-10T15:55:00'),
+              status: "Solve"
+          },
+          {
+              id: 'FA-549',
+              from: "TXL",
+              to: "CDG",
+              time: new Date('2018-04-10T16:10:00'),
+              status: "On time"
+          },
+          {
+              id: 'FA-549',
+              from: "TXL",
+              to: "CDG",
+              time: new Date('2018-04-10T16:30:00'),
+              status: "Cancelled"
+          },
+          {
+              id: 'FA-549',
+              from: "TXL",
+              to: "CDG",
+              time: new Date('2018-04-10T17:40:00'),
+              status: "Solve"
+          },
+          {
+              id: 'FA-598',
+              from: "DME",
+              to: "TXL",
+              time: new Date('2018-04-10T17:50:00'),
+              status: "On time"
+          },
+          {
+              id: 'FA-549',
+              from: "DME",
+              to: "TXL",
+              time: new Date('2018-04-10T18:10:00'),
+              status: "Delayed"
+          },
+          {
+              id: 'FA-580',
+              from: "TXL",
+              to: "CDG",
+              time: new Date('2018-04-10T18:15:00'),
+              status: "On time"
+          },
+          {
+              id: 'FA-549',
+              from: "TXL",
+              to: "GNV",
+              time: new Date('2018-04-10T18:35:00'),
+              status: "On time"
+          },
+          {
+              id: 'FA-549',
+              from: "TXL",
+              to: "CDG",
+              time: new Date('2018-04-10T19:20:00'),
+              status: "Solve"
+          },
+      ],
+              title: "Rain and storm in Berlin",
               date: new Date("2018-04-10"),
               logs: [
                   {
                       from: "www.france-goc.fr",
                       time: new Date('2018-04-10T10:13:00'),
                       text: "CDG reduced its capacity by 12% due to technical problems. Some flights may be deleayd or canceled."
+                  },
+                  {
+                      from: "Airport staff (e-mail):",
+                      time: new Date('2018-04-10T15:10:00'),
+                      text: "Hello. \n" +
+                      "There are some technical issues with the airport. \n" +
+                      "There is no way to serve #537 flight."
+                  },
+                  {
+                      from: "Airport staff (e-mail):",
+                      time: new Date('2018-04-10T18:10:00'),
+                      text: "Hello. \n" +
+                      "There are some technical issues with the airport. \n" +
+                      "There is no way to serve #537 flight."
+                  },
+                  {
+                      from: "www.france-goc.fr",
+                      time: new Date('2018-04-10T20:13:00'),
+                      text: "TXL reduced its capacity by 12% due to technical problems. Some flights may be deleayd or canceled."
+                  },
+                  {
+                      from: "www.france-goc.fr",
+                      time: new Date('2018-04-10T23:13:00'),
+                      text: "CDG reduced its capacity by 12% due to technical problems. Some flights may be deleayd or canceled."
                   }
-              ]
+              ],
+              details: {
+                  assignee: "Bob Dylan",
+                  status: "In progress",
+                  unmanaged_flights: 2,
+                  cancelled_flights: 7,
+                  passengers_affected: 148,
+                  "9hr_waits": 78,
+                  "5hr_waits": 34,
+                  "1hr_waits": 36
+              }
           },
           {
               id: 43,
@@ -222,26 +328,132 @@
               flights:[
                   {
                       id: 'FA-537',
-                      from: "DME",
+                      from: "BCN",
                       to: "CDG",
-                      time: new Date('2018-04-10T14:30:00')
+                      time: new Date('2018-04-10T14:30:00'),
+                      status: "Delayed"
+                  },
+                  {
+                      id: 'FA-549',
+                      from: "BCN",
+                      to: "CDG",
+                      time: new Date('2018-04-10T15:40:00'),
+                      status: "Delayed"
+                  },
+                  {
+                      id: 'FA-549',
+                      from: "BCN",
+                      to: "CDG",
+                      time: new Date('2018-04-10T15:50:00'),
+                      status: "Cancelled"
+                  },
+                  {
+                      id: 'FA-549',
+                      from: "BCN",
+                      to: "CDG",
+                      time: new Date('2018-04-10T15:55:00'),
+                      status: "Solve"
                   },
                   {
                       id: 'FA-549',
                       from: "DME",
+                      to: "BCN",
+                      time: new Date('2018-04-10T16:10:00'),
+                      status: "On time"
+                  },
+                  {
+                      id: 'FA-549',
+                      from: "DME",
+                      to: "BCN",
+                      time: new Date('2018-04-10T16:30:00'),
+                      status: "Cancelled"
+                  },
+                  {
+                      id: 'FA-549',
+                      from: "BCN",
                       to: "CDG",
-                      time: new Date('2018-04-10T15:40:00')
-                  }
+                      time: new Date('2018-04-10T17:40:00'),
+                      status: "Solve"
+                  },
+                  {
+                      id: 'FA-598',
+                      from: "DME",
+                      to: "BCN",
+                      time: new Date('2018-04-10T17:50:00'),
+                      status: "On time"
+                  },
+                  {
+                      id: 'FA-549',
+                      from: "DME",
+                      to: "BCN",
+                      time: new Date('2018-04-10T18:10:00'),
+                      status: "Delayed"
+                  },
+                  {
+                      id: 'FA-580',
+                      from: "DME",
+                      to: "BCN",
+                      time: new Date('2018-04-10T18:15:00'),
+                      status: "On time"
+                  },
+                  {
+                      id: 'FA-549',
+                      from: "DME",
+                      to: "BCN",
+                      time: new Date('2018-04-10T18:35:00'),
+                      status: "On time"
+                  },
+                  {
+                      id: 'FA-549',
+                      from: "BCN",
+                      to: "CDG",
+                      time: new Date('2018-04-10T19:20:00'),
+                      status: "Solve"
+                  },
               ],
-              title: "Capacity restriction in Berlin",
+              title: "Airport construction in Barcelona",
               date: new Date("2018-04-10"),
               logs: [
                   {
                       from: "www.france-goc.fr",
                       time: new Date('2018-04-10T10:13:00'),
+                      text: "BCN reduced its capacity by 12% due to technical problems. Some flights may be delayed or canceled."
+                  },
+                  {
+                      from: "Airport staff (e-mail):",
+                      time: new Date('2018-04-10T15:10:00'),
+                      text: "Hello. \n" +
+                      "There are some technical issues with the airport. \n" +
+                      "There is no way to serve #537 flight."
+                  },
+                  {
+                      from: "Airport staff (e-mail):",
+                      time: new Date('2018-04-10T18:10:00'),
+                      text: "Hello. \n" +
+                      "There are some technical issues with the airport. \n" +
+                      "There is no way to serve #537 flight."
+                  },
+                  {
+                      from: "www.france-goc.fr",
+                      time: new Date('2018-04-10T20:13:00'),
+                      text: "CDG reduced its capacity by 12% due to technical problems. Some flights may be deleayd or canceled."
+                  },
+                  {
+                      from: "www.france-goc.fr",
+                      time: new Date('2018-04-10T23:13:00'),
                       text: "CDG reduced its capacity by 12% due to technical problems. Some flights may be deleayd or canceled."
                   }
-              ]
+              ],
+              details: {
+                  assignee: "Bob Dylan",
+                  status: "In progress",
+                  unmanaged_flights: 2,
+                  cancelled_flights: 7,
+                  passengers_affected: 148,
+                  "9hr_waits": 78,
+                  "5hr_waits": 34,
+                  "1hr_waits": 36
+              }
           },
           {
               id: 43,
@@ -250,26 +462,132 @@
               flights:[
                   {
                       id: 'FA-537',
-                      from: "DME",
+                      from: "CGK",
                       to: "CDG",
-                      time: new Date('2018-04-10T14:30:00')
+                      time: new Date('2018-04-10T14:30:00'),
+                      status: "Delayed"
+                  },
+                  {
+                      id: 'FA-549',
+                      from: "CGK",
+                      to: "CDG",
+                      time: new Date('2018-04-10T15:40:00'),
+                      status: "Delayed"
                   },
                   {
                       id: 'FA-549',
                       from: "DME",
+                      to: "CGK",
+                      time: new Date('2018-04-10T15:50:00'),
+                      status: "Cancelled"
+                  },
+                  {
+                      id: 'FA-549',
+                      from: "DME",
+                      to: "CGK",
+                      time: new Date('2018-04-10T15:55:00'),
+                      status: "Solve"
+                  },
+                  {
+                      id: 'FA-549',
+                      from: "CGK",
                       to: "CDG",
-                      time: new Date('2018-04-10T15:40:00')
-                  }
+                      time: new Date('2018-04-10T16:10:00'),
+                      status: "On time"
+                  },
+                  {
+                      id: 'FA-549',
+                      from: "CGK",
+                      to: "CDG",
+                      time: new Date('2018-04-10T16:30:00'),
+                      status: "Cancelled"
+                  },
+                  {
+                      id: 'FA-549',
+                      from: "DME",
+                      to: "CGK",
+                      time: new Date('2018-04-10T17:40:00'),
+                      status: "Solve"
+                  },
+                  {
+                      id: 'FA-598',
+                      from: "DME",
+                      to: "CGK",
+                      time: new Date('2018-04-10T17:50:00'),
+                      status: "On time"
+                  },
+                  {
+                      id: 'FA-549',
+                      from: "CGK",
+                      to: "CDG",
+                      time: new Date('2018-04-10T18:10:00'),
+                      status: "Delayed"
+                  },
+                  {
+                      id: 'FA-580',
+                      from: "CGK",
+                      to: "CDG",
+                      time: new Date('2018-04-10T18:15:00'),
+                      status: "On time"
+                  },
+                  {
+                      id: 'FA-549',
+                      from: "DME",
+                      to: "CGK",
+                      time: new Date('2018-04-10T18:35:00'),
+                      status: "On time"
+                  },
+                  {
+                      id: 'FA-549',
+                      from: "CGK",
+                      to: "CDG",
+                      time: new Date('2018-04-10T19:20:00'),
+                      status: "Solve"
+                  },
               ],
-              title: "Capacity restriction in Berlin",
+              title: "Volcano eruption in Indonesia",
               date: new Date("2018-04-10"),
               logs: [
                   {
                       from: "www.france-goc.fr",
                       time: new Date('2018-04-10T10:13:00'),
                       text: "CDG reduced its capacity by 12% due to technical problems. Some flights may be deleayd or canceled."
+                  },
+                  {
+                      from: "Jakarta airport staff (e-mail):",
+                      time: new Date('2018-04-10T15:10:00'),
+                      text: "Hello. \n" +
+                      "There are some technical issues with the airport. \n" +
+                      "There is no way to serve #537 flight."
+                  },
+                  {
+                      from: "Airport staff (e-mail):",
+                      time: new Date('2018-04-10T18:10:00'),
+                      text: "Hello. \n" +
+                      "There are some technical issues with the airport. \n" +
+                      "There is no way to serve #537 flight."
+                  },
+                  {
+                      from: "www.france-goc.fr",
+                      time: new Date('2018-04-10T20:13:00'),
+                      text: "CDG reduced its capacity by 12% due to technical problems. Some flights may be deleayd or canceled."
+                  },
+                  {
+                      from: "www.france-goc.fr",
+                      time: new Date('2018-04-10T23:13:00'),
+                      text: "CDG reduced its capacity by 12% due to technical problems. Some flights may be deleayd or canceled."
                   }
-              ]
+              ],
+              details: {
+                  assignee: "Bob Dylan",
+                  status: "In progress",
+                  unmanaged_flights: 2,
+                  cancelled_flights: 7,
+                  passengers_affected: 148,
+                  "9hr_waits": 78,
+                  "5hr_waits": 34,
+                  "1hr_waits": 36
+              }
           },
           {
               id: 43,
@@ -278,47 +596,266 @@
               flights:[
                   {
                       id: 'FA-537',
-                      from: "DME",
+                      from: "ATH",
                       to: "CDG",
-                      time: new Date('2018-04-10T14:30:00')
+                      time: new Date('2018-04-10T14:30:00'),
+                      status: "Delayed"
+                  },
+                  {
+                      id: 'FA-549',
+                      from: "ATH",
+                      to: "CDG",
+                      time: new Date('2018-04-10T15:40:00'),
+                      status: "Delayed"
                   },
                   {
                       id: 'FA-549',
                       from: "DME",
+                      to: "ATH",
+                      time: new Date('2018-04-10T15:50:00'),
+                      status: "Cancelled"
+                  },
+                  {
+                      id: 'FA-549',
+                      from: "DME",
+                      to: "ATH",
+                      time: new Date('2018-04-10T15:55:00'),
+                      status: "Solve"
+                  },
+                  {
+                      id: 'FA-549',
+                      from: "ATH",
                       to: "CDG",
-                      time: new Date('2018-04-10T15:40:00')
-                  }
+                      time: new Date('2018-04-10T16:10:00'),
+                      status: "On time"
+                  },
+                  {
+                      id: 'FA-549',
+                      from: "ATH",
+                      to: "CDG",
+                      time: new Date('2018-04-10T16:30:00'),
+                      status: "Cancelled"
+                  },
+                  {
+                      id: 'FA-549',
+                      from: "DME",
+                      to: "ATH",
+                      time: new Date('2018-04-10T17:40:00'),
+                      status: "Solve"
+                  },
+                  {
+                      id: 'FA-598',
+                      from: "ATH",
+                      to: "ZHR",
+                      time: new Date('2018-04-10T17:50:00'),
+                      status: "On time"
+                  },
+                  {
+                      id: 'FA-549',
+                      from: "DME",
+                      to: "ATH",
+                      time: new Date('2018-04-10T18:10:00'),
+                      status: "Delayed"
+                  },
+                  {
+                      id: 'FA-580',
+                      from: "DME",
+                      to: "ATH",
+                      time: new Date('2018-04-10T18:15:00'),
+                      status: "On time"
+                  },
+                  {
+                      id: 'FA-549',
+                      from: "DME",
+                      to: "ATH",
+                      time: new Date('2018-04-10T18:35:00'),
+                      status: "On time"
+                  },
+                  {
+                      id: 'FA-549',
+                      from: "ATH",
+                      to: "CDG",
+                      time: new Date('2018-04-10T19:20:00'),
+                      status: "Solve"
+                  },
               ],
-              title: "Capacity restriction in Berlin",
+              title: "Strike in Athens",
               date: new Date("2018-04-10"),
               logs: [
                   {
                       from: "www.france-goc.fr",
                       time: new Date('2018-04-10T10:13:00'),
+                      text: "ATH reduced its capacity by 12% due to technical problems. Some flights may be deleayd or canceled."
+                  },
+                  {
+                      from: "Airport staff (e-mail):",
+                      time: new Date('2018-04-10T15:10:00'),
+                      text: "Hello. \n" +
+                      "There are some technical issues with the airport. \n" +
+                      "There is no way to serve #537 flight."
+                  },
+                  {
+                      from: "Airport staff (e-mail):",
+                      time: new Date('2018-04-10T18:10:00'),
+                      text: "Hello. \n" +
+                      "There are some technical issues with the airport. \n" +
+                      "There is no way to serve #537 flight."
+                  },
+                  {
+                      from: "www.france-goc.fr",
+                      time: new Date('2018-04-10T20:13:00'),
+                      text: "CDG reduced its capacity by 12% due to technical problems. Some flights may be deleayd or canceled."
+                  },
+                  {
+                      from: "www.france-goc.fr",
+                      time: new Date('2018-04-10T23:13:00'),
                       text: "CDG reduced its capacity by 12% due to technical problems. Some flights may be deleayd or canceled."
                   }
-              ]
+              ],
+              details: {
+                  assignee: "Bob Dylan",
+                  status: "In progress",
+                  unmanaged_flights: 2,
+                  cancelled_flights: 7,
+                  passengers_affected: 148,
+                  "9hr_waits": 78,
+                  "5hr_waits": 34,
+                  "1hr_waits": 36
+              }
           },
           {
-              id: 43,
+              id: 53,
               type: "ATC",
               short_type: "ATC",
               flights:[
                   {
                       id: 'FA-537',
-                      from: "DME",
+                      from: "WAW",
                       to: "CDG",
-                      time: new Date('2018-04-10T14:30:00')
+                      time: new Date('2018-04-10T14:30:00'),
+                      status: "Delayed"
                   },
                   {
                       id: 'FA-549',
                       from: "DME",
+                      to: "WAW",
+                      time: new Date('2018-04-10T15:40:00'),
+                      status: "Delayed"
+                  },
+                  {
+                      id: 'FA-549',
+                      from: "WAW",
                       to: "CDG",
-                      time: new Date('2018-04-10T15:40:00')
+                      time: new Date('2018-04-10T15:50:00'),
+                      status: "Cancelled"
+                  },
+                  {
+                      id: 'FA-549',
+                      from: "WAW",
+                      to: "CDG",
+                      time: new Date('2018-04-10T15:55:00'),
+                      status: "Solve"
+                  },
+                  {
+                      id: 'FA-549',
+                      from: "DME",
+                      to: "WAW",
+                      time: new Date('2018-04-10T16:10:00'),
+                      status: "On time"
+                  },
+                  {
+                      id: 'FA-549',
+                      from: "DME",
+                      to: "WAW",
+                      time: new Date('2018-04-10T16:30:00'),
+                      status: "Cancelled"
+                  },
+                  {
+                      id: 'FA-549',
+                      from: "WAW",
+                      to: "CDG",
+                      time: new Date('2018-04-10T17:40:00'),
+                      status: "Solve"
+                  },
+                  {
+                      id: 'FA-598',
+                      from: "DME",
+                      to: "WAW",
+                      time: new Date('2018-04-10T17:50:00'),
+                      status: "On time"
+                  },
+                  {
+                      id: 'FA-549',
+                      from: "WAW",
+                      to: "CDG",
+                      time: new Date('2018-04-10T18:10:00'),
+                      status: "Delayed"
+                  },
+                  {
+                      id: 'FA-580',
+                      from: "WAW",
+                      to: "CDG",
+                      time: new Date('2018-04-10T18:15:00'),
+                      status: "On time"
+                  },
+                  {
+                      id: 'FA-549',
+                      from: "DME",
+                      to: "WAW",
+                      time: new Date('2018-04-10T18:35:00'),
+                      status: "On time"
+                  },
+                  {
+                      id: 'FA-549',
+                      from: "WAW",
+                      to: "CDG",
+                      time: new Date('2018-04-10T19:20:00'),
+                      status: "Solve"
+                  },
+              ],
+              title: "Capacity restriction in Warsaw",
+              date: new Date("2018-04-10"),
+              logs: [
+                  {
+                      from: "www.poland-goc.pl",
+                      time: new Date('2018-04-10T10:13:00'),
+                      text: "WAW reduced its capacity by 12% due to technical problems. Some flights may be deleayd or canceled."
+                  },
+                  {
+                      from: "Airport staff (e-mail):",
+                      time: new Date('2018-04-10T15:10:00'),
+                      text: "Hello. \n" +
+                      "There are some technical issues with the airport. \n" +
+                      "There is no way to serve #537 flight."
+                  },
+                  {
+                      from: "Airport staff (e-mail):",
+                      time: new Date('2018-04-10T18:10:00'),
+                      text: "Hello. \n" +
+                      "There are some technical issues with the airport. \n" +
+                      "There is no way to serve #537 flight."
+                  },
+                  {
+                      from: "www.france-goc.fr",
+                      time: new Date('2018-04-10T20:13:00'),
+                      text: "CDG reduced its capacity by 12% due to technical problems. Some flights may be deleayd or canceled."
+                  },
+                  {
+                      from: "www.france-goc.fr",
+                      time: new Date('2018-04-10T23:13:00'),
+                      text: "CDG reduced its capacity by 12% due to technical problems. Some flights may be deleayd or canceled."
                   }
               ],
-              title: "Capacity restriction in Berlin",
-              date: new Date("2018-04-10")
+              details: {
+                  assignee: "Bob Dylan",
+                  status: "In progress",
+                  unmanaged_flights: 2,
+                  cancelled_flights: 7,
+                  passengers_affected: 148,
+                  "9hr_waits": 78,
+                  "5hr_waits": 34,
+                  "1hr_waits": 36
+              }
           }
       ]
     </script>
