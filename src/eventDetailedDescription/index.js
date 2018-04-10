@@ -43,9 +43,11 @@ class EventDetailedDescription extends Component {
         console.log(currentEventInfo);
 
 
+        let outOfBoxHeader = [];
         let flights_statuses = [];
         let eventLogs = [];
         if (this.state.currentEvent !== "") {
+            outOfBoxHeader.push(<p className="eventDetailedDescription__header"><span className="darkBlueText">{this.state.currentEvent}</span> {currentEventInfo.title}</p>);
             currentEventInfo.flights.forEach((flight) => {
                 let status_class = [];
                 if (flight.status === "Delayed") {
@@ -74,9 +76,7 @@ class EventDetailedDescription extends Component {
 
         return (
             <div className={`eventDetailedDescription ${isChosen}`}>
-                <p className="eventDetailedDescription__header">
-                    <span className="darkBlueText">{this.props.itemId}</span> {this.props.title}
-                </p>
+                {outOfBoxHeader}
                 <div className="eventDetailedDescription__detailed_info">
                     <div className="eventDetailedDescription__left">
                         <div className="eventDetailedDescription__search">
