@@ -23,6 +23,10 @@
     color: #184092;
     letter-spacing: 0.3px;
     padding-right: 10px;
+    cursor: pointer;
+}
+.flight_code_text:hover{
+    text-decoration: underline;
 }
 
 .cancelled_text_flight {
@@ -78,8 +82,15 @@
 .eventDetailedDescription__detailed_info {
     display: flex;
     align-items: flex-start;
-}
+    margin-top:15px;
+    min-width: 859px;
+    background: white;
 
+}
+.eventDetailedDescription__detailed_info > div:first-of-type{
+    display: flex;
+    align-items: flex-start;
+}
 .eventDetailedDescription__header{
     margin-top: 3px;
     font-family: HelveticaNeue-Medium;
@@ -90,7 +101,6 @@
 .eventDetailedDescription__left{
     background: white;
     padding:15px;
-    margin-top:15px;
     min-width: 294px;
     min-height: 600px;
 }
@@ -104,6 +114,10 @@
     box-sizing: border-box;
     display: inline-block;
     margin-left: 15px;
+}
+.eventDetailedDescription__searchBlock img{
+    position: relative;
+    top:1px;
 }
 .eventDetailedDescription__filterIcon{
     cursor: pointer;
@@ -143,9 +157,9 @@
 .eventDetailedDescription__center{
     background: white;
     padding:15px;
-    margin-top:15px;
     min-width: 290px;
     min-height: 600px;
+    max-width: 290px;
 }
 
 .eventDetailedDescription__sectionHeader{
@@ -188,7 +202,6 @@
 .eventDetailedDescription__right {
     background: white;
     padding: 15px;
-    margin-top: 15px;
     min-width: 185px;
     min-height: 600px;
 }
@@ -214,7 +227,10 @@
     font-size: 13px;
     color: #184092;
     letter-spacing: 0.38px;
-
+    cursor: pointer;
+}
+.eventDetailedDescription__detailsImportantInfo:hover{
+    text-decoration: underline;
 }
 
 .eventDetailedDescription__detailsNumbers {
@@ -230,3 +246,52 @@
     color: #000000;
     letter-spacing: 0.38px;
 }
+
+#solvePic{
+    position: relative;
+    top: 1px;
+}
+
+
+.eventDetailedDescription__filtersBlock{
+    min-height: 100%;
+    position: absolute;
+    top: 40px;
+    left:0;
+    box-sizing: border-box;
+    min-width: 566px;
+    background-image: linear-gradient(to right, rgba(178,178,178,0.26) 6%, #EAEAEA 69%);
+    display: none;
+}
+
+.eventDetailedDescription__filtersBlockBlock{
+    min-height: 600px;
+    background: white;
+    margin-top:61px;
+    min-width: 360px;
+    max-width: 360px;
+    margin-left:206px;
+    border-radius: 2px;
+    padding-top:15px;
+    padding-left:20px;
+}
+.eventDetailedDescription__filtersBlockTitle{
+    font-family: HelveticaNeue-Medium;
+    font-size: 15px;
+    color: #000000;
+    letter-spacing: 0.35px;
+}
+
+
+
+
+.fadeIn-enter {
+    opacity: 0;
+    transition: 0.3s ease-in-out all;
+    margin-left: -20px;
+}
+
+.fadeIn-enter.fadeIn-enter-active {
+    opacity: 1;
+}
+

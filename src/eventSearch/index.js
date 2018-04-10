@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './index.css';
 import SearchBlock from "./SearchBlock.js"
 import SearchResultItem from "./SearchResultItem.js"
-import DetailedDescription from "../eventDetailedDescription/index.js"
+import ReactCSSTransitionGroup from 'react-addons-css-transition-group'; // ES6
 
 
 class EventSearch extends Component {
@@ -97,14 +97,21 @@ class EventSearch extends Component {
             return (
                 <div id="eventSearch">
                     <SearchBlock/>
-                    {blocks}
+                    <ReactCSSTransitionGroup
+                        transitionName="searchResultItemAnimate"
+                        transitionEnterTimeout={500}
+                        transitionLeaveTimeout={300}>
+                        {blocks}
+                    </ReactCSSTransitionGroup>
                 </div>
             );
-        }
-        else {
-            return null;
+        } else {
+            return (<div id="eventSearch">
+                <SearchBlock/>
+            </div>);
         }
     }
+
 }
 
 export default EventSearch;

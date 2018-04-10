@@ -3,7 +3,7 @@ import './Content.css';
 import Filter from "../eventFilter/index.js"
 import EventSearch from "../eventSearch/index.js"
 import EventDetailedDescription from "../eventDetailedDescription/index.js"
-
+import EventDetailsFilters from "../eventDetailedDescription/Filters.js"
 
 class Content extends Component {
     constructor(props){
@@ -26,6 +26,7 @@ class Content extends Component {
                     logs={this.state.event.logs}
                     details={this.state.event.details}
                 />
+                <EventDetailsFilters/>
             </div>
         );
     }

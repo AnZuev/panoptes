@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import './index.css';
+import Stagger from 'react-css-stagger';
+
 
 class EventDetailedDescription extends Component {
     constructor(props){
@@ -78,49 +80,55 @@ class EventDetailedDescription extends Component {
             <div className={`eventDetailedDescription ${isChosen}`}>
                 {outOfBoxHeader}
                 <div className="eventDetailedDescription__detailed_info">
-                    <div className="eventDetailedDescription__left">
-                        <div className="eventDetailedDescription__search">
-                            <img src="/imgs/eventDetailsFilter.svg" alt="" className="eventDetailedDescription__filterIcon"/>
-                            <p className="eventDetailedDescription__searchBlock">
-                                <img src="/imgs/searchIcon.svg"/>
-                                <div className="blockTenPXWidth"></div>
-                                <input placeholder="Search"></input>
-                            </p>
-                        </div>
-                        <div className="eventDetailedDescription__timeBlock">
-                            <p className="eventDetailedDescription__timeBlockHeader">14-16</p>
-                            {flights_statuses.slice(0, 4)}
-                            <p className="eventDetailedDescription__timeBlockHeader">16-18</p>
-                            {flights_statuses.slice(4, 8)}
-                            <p className="eventDetailedDescription__timeBlockHeader">18-20</p>
-                            {flights_statuses.slice(8, 12)}
-                        </div>
-                    </div>
-                    <div className="eventDetailedDescription__center">
-                        <p className="eventDetailedDescription__sectionHeader">Logs</p>
-                        <div>
-                            {eventLogs}
+                    <Stagger transition="fadeIn" delay={600}>
+
+                        <div className="eventDetailedDescription__left">
+                            <div className="eventDetailedDescription__search">
+                                <img src="/imgs/eventDetailsFilter.svg" alt="" className="eventDetailedDescription__filterIcon"/>
+                                <p className="eventDetailedDescription__searchBlock">
+                                    <img src="/imgs/searchIcon.svg"/>
+                                    <div className="blockTenPXWidth"></div>
+                                    <input placeholder="Search"></input>
+                                </p>
+                            </div>
+                            <div className="eventDetailedDescription__timeBlock">
+                                <p className="eventDetailedDescription__timeBlockHeader">14-16</p>
+                                {flights_statuses.slice(0, 4)}
+                                <p className="eventDetailedDescription__timeBlockHeader">16-18</p>
+                                {flights_statuses.slice(4, 8)}
+                                <p className="eventDetailedDescription__timeBlockHeader">18-20</p>
+                                {flights_statuses.slice(8, 12)}
+                            </div>
                         </div>
 
-                    </div>
-                    <div className="eventDetailedDescription__right">
-                        <p className="eventDetailedDescription__sectionHeader">Details</p>
-                        <div className="eventDetailedDescription__detailsBlock">
-                            <p><span className="eventDetailedDescription__detailsText">Assignee: </span><span className="eventDetailedDescription__detailsImportantInfo">{this.props.details.assignee}</span></p>
-                            <p><span className="eventDetailedDescription__detailsText">Status: </span><span className="eventDetailedDescription__detailsImportantInfo">{this.props.details.status}</span></p>
+                        <div className="eventDetailedDescription__center">
+                            <p className="eventDetailedDescription__sectionHeader">Logs</p>
+                            <div>
+                                {eventLogs}
+                            </div>
+
                         </div>
-                        <div className="eventDetailedDescription__detailsBlock">
-                            <p><span className="eventDetailedDescription__detailsNumbers">{this.props.flights.length} </span><span className="eventDetailedDescription__detailsText">flights:</span></p>
-                            <p className="eventDetailedDescription__detailsSubBlock"><span className="eventDetailedDescription__detailsImportantInfo">{this.props.details.unmanaged_flights} flights unmanaged</span></p>
-                            <p className="eventDetailedDescription__detailsSubBlock"><span className="eventDetailedDescription__detailsImportantInfo">{this.props.details.cancelled_flights} flights cancelled</span></p>
+
+                        <div className="eventDetailedDescription__right">
+                            <p className="eventDetailedDescription__sectionHeader">Details</p>
+                            <div className="eventDetailedDescription__detailsBlock">
+                                <p><span className="eventDetailedDescription__detailsText">Assignee: </span><span className="eventDetailedDescription__detailsImportantInfo">{this.props.details.assignee}</span></p>
+                                <p><span className="eventDetailedDescription__detailsText">Status: </span><span className="eventDetailedDescription__detailsImportantInfo">{this.props.details.status}</span></p>
+                            </div>
+                            <div className="eventDetailedDescription__detailsBlock">
+                                <p><span className="eventDetailedDescription__detailsNumbers">{this.props.flights.length} </span><span className="eventDetailedDescription__detailsText">flights:</span></p>
+                                <p className="eventDetailedDescription__detailsSubBlock"><span className="eventDetailedDescription__detailsImportantInfo">{this.props.details.unmanaged_flights} flights unmanaged</span></p>
+                                <p className="eventDetailedDescription__detailsSubBlock"><span className="eventDetailedDescription__detailsImportantInfo">{this.props.details.cancelled_flights} flights cancelled</span></p>
+                            </div>
+                            <div className="eventDetailedDescription__detailsBlock">
+                                <p><span className="eventDetailedDescription__detailsNumbers">{this.props.details.passengers_affected} </span><span className="eventDetailedDescription__detailsText">passengers:</span></p>
+                                <p className="eventDetailedDescription__detailsSubBlock">{this.props.details["9hr_waits"]} <span className="eventDetailedDescription__detailsText">waits for</span> 9 <span className="eventDetailedDescription__detailsText">hours</span></p>
+                                <p className="eventDetailedDescription__detailsSubBlock">{this.props.details["5hr_waits"]} <span className="eventDetailedDescription__detailsText">waits for</span> 5 <span className="eventDetailedDescription__detailsText">hours</span></p>
+                                <p className="eventDetailedDescription__detailsSubBlock">{this.props.details["1hr_waits"]} <span className="eventDetailedDescription__detailsText">waits for</span> 1 <span className="eventDetailedDescription__detailsText">hour</span></p>
+                            </div>
                         </div>
-                        <div className="eventDetailedDescription__detailsBlock">
-                            <p><span className="eventDetailedDescription__detailsNumbers">{this.props.details.passengers_affected} </span><span className="eventDetailedDescription__detailsText">passengers:</span></p>
-                            <p className="eventDetailedDescription__detailsSubBlock">{this.props.details["9hr_waits"]} <span className="eventDetailedDescription__detailsText">waits for</span> 9 <span className="eventDetailedDescription__detailsText">hours</span></p>
-                            <p className="eventDetailedDescription__detailsSubBlock">{this.props.details["5hr_waits"]} <span className="eventDetailedDescription__detailsText">waits for</span> 5 <span className="eventDetailedDescription__detailsText">hours</span></p>
-                            <p className="eventDetailedDescription__detailsSubBlock">{this.props.details["1hr_waits"]} <span className="eventDetailedDescription__detailsText">waits for</span> 1 <span className="eventDetailedDescription__detailsText">hour</span></p>
-                        </div>
-                    </div>
+                    </Stagger>
+
                 </div>
             </div>
         );
@@ -128,3 +136,4 @@ class EventDetailedDescription extends Component {
 }
 
 export default EventDetailedDescription;
+

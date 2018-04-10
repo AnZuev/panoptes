@@ -1,26 +1,29 @@
-header{
-  background: #153981;
-  min-height: 40px;
-  max-height: 40px;
-  padding: 0px;
-  padding-left: 20px;
-  padding-right: 20px;
+header {
+    background: #153981;
+    min-height: 40px;
+    max-height: 40px;
+    padding: 0 20px;
+    position: fixed;
+    min-width: 100%;
+    box-sizing: border-box;
+    top:0
 }
 
-#headerLogo{
-  margin-top:11px;
-  margin-bottom: 10px;
-  padding: 0px;
-}
-#headerProfile{
-  float: right;
-  margin-top: 11px;
-  cursor: pointer;
+#headerLogo {
+    margin-top: 11px;
+    margin-bottom: 10px;
+    padding: 0px;
 }
 
-#headerLogout{
-  float: right;
-  margin-top: 15px;
-  margin-left: 20px;
-  cursor: pointer;
+#headerProfile {
+    float: right;
+    margin-top: 11px;
+    cursor: pointer;
+}
+
+#headerLogout {
+    float: right;
+    margin-top: 15px;
+    margin-left: 20px;
+    cursor: pointer;
 }
