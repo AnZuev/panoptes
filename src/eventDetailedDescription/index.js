@@ -80,7 +80,7 @@ class EventDetailedDescription extends Component {
             <div className={`eventDetailedDescription ${isChosen}`}>
                 {outOfBoxHeader}
                 <div className="eventDetailedDescription__detailed_info">
-                    <Stagger transition="fadeIn" delay={600}>
+                    <Stagger initialDelay={600} transition="fadeIn" delay={400} >
 
                         <div className="eventDetailedDescription__left">
                             <div className="eventDetailedDescription__search">
