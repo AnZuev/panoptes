@@ -12,6 +12,7 @@ class EventDetailedDescription extends Component {
         };
         this.choose = this.choose.bind(this);
         this.unchoose = this.unchoose.bind(this);
+        this.handleOpenFiltersClick = this.handleOpenFiltersClick.bind(this);
         window.eventDetails = this;
     }
 
@@ -27,6 +28,10 @@ class EventDetailedDescription extends Component {
         this.setState({
             chosen: false
         });
+    }
+
+    handleOpenFiltersClick(){
+        window.content.toggleEventFilter();
     }
 
 
@@ -84,7 +89,7 @@ class EventDetailedDescription extends Component {
 
                         <div className="eventDetailedDescription__left">
                             <div className="eventDetailedDescription__search">
-                                <img src="/imgs/eventDetailsFilter.svg" alt="" className="eventDetailedDescription__filterIcon"/>
+                                <img src="/imgs/eventDetailsFilter.svg" alt="" className="eventDetailedDescription__filterIcon" onClick={this.handleOpenFiltersClick}/>
                                 <p className="eventDetailedDescription__searchBlock">
                                     <img src="/imgs/searchIcon.svg"/>
                                     <div className="blockTenPXWidth"></div>
