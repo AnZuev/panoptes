@@ -10,11 +10,13 @@ class EventSearch extends Component {
         super(props);
         this.state = {
             filteredEvents: window.events,
-            events: window.events
+            events: window.events,
+            search: ""
         };
         window.eventSearch = this;
         this.data = {};
         this.filter();
+        this.updateSearch = this.updateSearch.bind(this);
 
     }
     setActive(searchResultItem){
@@ -22,6 +24,15 @@ class EventSearch extends Component {
             this.data.active.unchoose();
         }
         this.data.active = searchResultItem;
+    }
+
+    updateSearch(event) {
+        console.log("testing Search from eventSearch");
+        console.log(event.target.value);
+        this.setState({
+            search: event.target.value
+        });
+        this.forceUpdate();
     }
 
     filter(){
@@ -83,18 +94,29 @@ class EventSearch extends Component {
 
     render() {
         let blocks = [];
-        blocks.push();
         this.state.filteredEvents.forEach((item) => {
-            blocks.push(<SearchResultItem
-                id={item.id}
-                type={item.short_type}
-                title={item.title}
-                date={item.date}
-                numberOfFlights={item.flights.length}
-            />)
+            if (this.state.search !== "") {
+                if (item.title.toLowerCase().indexOf(this.state.search.toLowerCase()) !== -1) {
+                    blocks.push(<SearchResultItem
+                        id={item.id}
+                        type={item.short_type}
+                        title={item.title}
+                        date={item.date}
+                        numberOfFlights={item.flights.length}
+                    />)
+                }
+            }
+            else {
+                blocks.push(<SearchResultItem
+                    id={item.id}
+                    type={item.short_type}
+                    title={item.title}
+                    date={item.date}
+                    numberOfFlights={item.flights.length}
+                />)
+            }
         });
-        if (blocks.length !== 0) {
-            return (
+        return (
                 <div id="eventSearch">
                     <SearchBlock/>
                     <ReactCSSTransitionGroup
@@ -105,11 +127,6 @@ class EventSearch extends Component {
                     </ReactCSSTransitionGroup>
                 </div>
             );
-        } else {
-            return (<div id="eventSearch">
-                <SearchBlock/>
-            </div>);
-        }
     }
 
 }
